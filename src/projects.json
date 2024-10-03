@@ -1,0 +1,35 @@
+{
+    "projects": [
+      {
+        "name": "ManageME",
+        "description": "A project management tool designed for tracking tasks, milestones, and team collaboration efficiently.",
+        "img":"/summerSite.png"
+      },
+      {
+        "name": "ReactApp",
+        "description": "A modern web application built with React for delivering dynamic, responsive user interfaces.",
+        "img":"/summerSite.png"
+      },
+      {
+        "name": "SummerRefresh",
+        "description": "A refreshing landing page and marketing site developed for a summer-themed product line or event.",
+        "img":"/summerSite.png"
+      },
+      {
+        "name": "GastroSpace",
+        "description": "A platform for food enthusiasts to share, explore, and discover new recipes, restaurant reviews, and more.",
+        "img":"/summerSite.png"
+      },
+      {
+        "name": "ReactNativeApp",
+        "description": "A cross-platform mobile application built using React Native, designed for seamless performance on both iOS and Android.",
+        "img":"/summerSite.png"
+      },
+      {
+        "name": "BKPC",
+        "description": "A full-stack solution developed for managing backend and frontend components of an online service platform.",
+        "img":"/summerSite.png"
+      }
+    ]
+  }
+  
