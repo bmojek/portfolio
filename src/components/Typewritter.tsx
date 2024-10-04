@@ -1,26 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 
 function Typewriter() {
-  const welcomeText = [
-    "Welcome",
-    "Hello",
-    "Hi",
-    "Howdy",
-    "Greetings",
-    "Bonjour",
-    "Hey",
-    "Hola",
-    "Hallo",
-    "Ciao",
-    "Cześć",
-    "Olá",
-  ];
-
   const delay = 50;
   const wordPause = 2000;
   const [currentText, setCurrentText] = useState("");
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const welcomeText = useMemo(
+    () => [
+      "Welcome",
+      "Hello",
+      "Hi",
+      "Howdy",
+      "Greetings",
+      "Bonjour",
+      "Hey",
+      "Hola",
+      "Hallo",
+      "Ciao",
+      "Cześć",
+      "Olá",
+    ],
+    []
+  );
 
   useEffect(() => {
     const text = welcomeText[currentWordIndex] + ".";
