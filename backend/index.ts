@@ -5,6 +5,8 @@ import cors from "cors";
 
 const app = express();
 const port = 8080;
+const StripeKey = process.env.STRIPEKEY;
+const stripe = require("stripe")(StripeKey);
 
 const tokenSecret = process.env.TOKEN_SECRET as string;
 const firebaseConfig = process.env.FIREBASECONFIG as string;
@@ -12,6 +14,40 @@ let refreshToken: string | null = null;
 
 app.use(cors());
 app.use(express.json());
+
+app.post("/api/checkout", async (req, res) => {
+  const items: { priceId: string; quantity: number }[] = req.body.items;
+
+  let lineItems: { price: string; quantity: number }[] = [];
+
+  items.forEach((item) => {
+    lineItems.push({
+      price: item.priceId,
+      quantity: item.quantity,
+    });
+  });
+
+  try {
+    const session = await stripe.checkout.sessions.create({
+      line_items: lineItems,
+      mode: "payment",
+      success_url: "http://localhost:3000/Success",
+      cancel_url: "http://localhost:3000/Cancel",
+      shipping_address_collection: {
+        allowed_countries: ["PL"],
+      },
+      phone_number_collection: {
+        enabled: true,
+      },
+    });
+
+    res.json({
+      url: session.url,
+    });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to create session" });
+  }
+});
 
 app.get("/", (req, res) => {
   res.send(`Hello World - simple api with JWT!`);

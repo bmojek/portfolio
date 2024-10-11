@@ -1,15 +1,16 @@
 {
     "projects": [
       {
-        "name": "ManageMe",
-        "description": "A project management tool designed for tracking tasks, milestones, and team collaboration efficiently.",
-        "img":"/img/managemeSite.png"
-      },
-      {
         "name": "SummerRefresh",
         "description": "A refreshing landing page and marketing site developed for a summer-themed product line or event.",
         "img":"/img/summerSite.png"
       },
+      {
+        "name": "ManageMe",
+        "description": "A project management tool designed for tracking tasks, milestones, and team collaboration efficiently.",
+        "img":"/img/managemeSite.png"
+      },
+      
       
       {
         "name": "BKPC",
