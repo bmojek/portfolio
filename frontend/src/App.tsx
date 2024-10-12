@@ -3,6 +3,7 @@ import ManageMe from "./pages/ManageMe";
 import SummerRefresh from "./pages/SummerRefresh";
 import FakeRestApi from "./pages/FakeRestApi";
 import BKPC from "./pages/BKPC";
+import RNFakeRestApi from "./pages/RNFakeRestApi";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/SummerRefresh" element={<SummerRefresh />} />
         <Route path="/FakeRestApi" element={<FakeRestApi />} />
         <Route path="/BKPC" element={<BKPC />} />
+        <Route path="/RNFakeRestApi" element={<RNFakeRestApi />} />
       </Routes>
     </Router>
   );

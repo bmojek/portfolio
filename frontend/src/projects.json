@@ -29,7 +29,7 @@
         "img":"/img/placeholder.jpg"
       },
       {
-        "name": "ReactNativeApp",
+        "name": "RNFakeRestApi",
         "description": "A cross-platform mobile application built using React Native, designed for seamless performance on both iOS and Android.",
         "img":"/img/placeholder.jpg"
       }
