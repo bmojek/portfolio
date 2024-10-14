@@ -72,6 +72,7 @@ function Main() {
           <h1 className="text-black text-5xl font-semibold text-center">
             My Projects
           </h1>
+
           <Projects />
         </div>
       </div>

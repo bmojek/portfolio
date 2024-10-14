@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ProjectSim from "../components/ProjectSim";
 
 function RNFakeRestApi() {
-  useEffect(() => {}, []);
   return (
     <ProjectSim
       url="https://snack.expo.dev/embedded/@bmojek/react-native-fake-api?iframeId=3rd8w71fwl&amp;preview=true&amp;platform=android&amp;theme=dark"
